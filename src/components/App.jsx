@@ -1,14 +1,23 @@
 import { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {selectContact} from './feture/contactsSlice';
+
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import ContactList from 'components/ContactList/ContactList';
-import AddingContacts from 'components/AddingContacts/AddingContacts';
+
 import { getFromStorage } from 'service/localStorageServic';
 import { saveToStorage } from 'service/localStorageServic';
+
+import ContactList from 'components/ContactList/ContactList';
+import AddingContacts from 'components/AddingContacts/AddingContacts';
 
 export const App = () => {
   const [contacts, setContacts] = useState(getFromStorage('contacts'));
   const [filter, setFilter] = useState('');
+
+  const dispatch = useDispatch()
+  const contactsRedux = useSelector(selectContact)
+  
 
   useEffect(() => {
     saveToStorage('contacts', contacts);
