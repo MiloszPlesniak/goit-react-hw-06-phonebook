@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import css from './AddingContacts.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContact, addContact } from 'components/feture/contactsSlice';
@@ -11,12 +10,10 @@ const AddingContacts = () => {
   const dispatch = useDispatch();
   const name = useRef(null);
   const number = useRef(null);
-  
-  
+
   const addContactInPhoneBook = e => {
     console.log(e);
     e.preventDefault();
-    // console.log(name.current.value, number.current.value);
     const newContact = {
       id: nanoid(),
       name: name.current.value,
@@ -66,8 +63,5 @@ const AddingContacts = () => {
     </div>
   );
 };
-// AddingContacts.propTypes = {
-//   title: PropTypes.string,
-//   handleAddContact: PropTypes.func,
-// };
+
 export default AddingContacts;

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { changeFilter } from 'components/feture/contactsSlice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
@@ -16,10 +15,6 @@ const SearchFilter = () => {
       }}
     />
   );
-};
-
-SearchFilter.propTypes = {
-  changeFilter: PropTypes.func,
 };
 
 export default SearchFilter;

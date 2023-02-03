@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'components/feture/contactsSlice';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const ListElement = ({ singleContact }) => {
   const dispatch = useDispatch();
@@ -20,14 +20,11 @@ const ListElement = ({ singleContact }) => {
   );
 };
 
-// ListElement.propTypes = {
-//   contactsData: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
-//   handleDeleteContact: PropTypes.func,
-// };
+ListElement.propTypes = {
+  singleContact: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    number: PropTypes.string,
+  }),
+};
 export default ListElement;

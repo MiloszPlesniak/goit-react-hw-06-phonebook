@@ -23,8 +23,7 @@ export const contactsSlice = createSlice({
       contacts.splice(index, 1);
     },
     changeFilter: (state, { payload }) => {
-        state.filter = payload;
-        
+      state.filter = payload;
     },
   },
 });
