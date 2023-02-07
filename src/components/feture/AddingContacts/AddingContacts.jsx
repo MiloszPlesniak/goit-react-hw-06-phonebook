@@ -1,6 +1,6 @@
 import css from './AddingContacts.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectContact, addContact } from 'components/feture/contactsSlice';
+import { selectContact, addContact } from 'redux/contactsSlice';
 import { useRef } from 'react';
 import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';

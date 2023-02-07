@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'components/feture/contactsSlice';
+import { deleteContact } from 'redux/contactsSlice';
 import PropTypes from 'prop-types';
 
 const ListElement = ({ singleContact }) => {

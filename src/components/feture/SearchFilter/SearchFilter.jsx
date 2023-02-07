@@ -1,4 +1,4 @@
-import { changeFilter } from 'components/feture/contactsSlice';
+import { changefilter } from 'redux/filterSlice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 
@@ -11,7 +11,7 @@ const SearchFilter = () => {
       type="text"
       name="Search"
       onChange={() => {
-        dispatch(changeFilter(input.current.value));
+        dispatch(changefilter(input.current.value));
       }}
     />
   );
